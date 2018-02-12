@@ -30,9 +30,9 @@ def word_embeddings(dataset):
             sim = 1 - spatial.distance.cosine(a_vec, b_vec)
             X[i, 0] = sim
         except:
-            print(a_vec)
-            print(b_vec)
-            print()
+            #print(a_vec)
+            #print(b_vec)
+            #print()
             X[i, 0] = 0.5
     return X
 
@@ -99,6 +99,9 @@ def classify(corpus):
     svm_model = svm.LinearSVC()
     svm_model.fit(X_train, y_train)
     prediction = evaluate(svm_model, X_test, y_test)
+
+    print('\n'*7)
+    print(y_test)
 
     """for i, qp in enumerate(test):
         print('actual: ', y_test[i])

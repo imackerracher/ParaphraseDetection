@@ -3,7 +3,7 @@ import os
 
 
 """
-STS corpus: each sentence pair has a similarity score (float between 0 and 5).
+STS corpus: each sentence pair has a similarity score (float between 0 and 1).
 Probably should only take sentence pairs that exceed certain threshold.
 7640 sentence pairs
 """
